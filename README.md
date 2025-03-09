@@ -21,7 +21,6 @@ lib/
     │   ├── base/         # Base classes and interfaces
     │   ├── constants/    # Application constants
     │   ├── entities/     # Base entities
-    │   ├── error/        # Error handling
     │   ├── exceptions/   # Exceptions
     │   ├── localization/ # Localization
     │   ├── models/       # Base data models
@@ -31,7 +30,7 @@ lib/
     │   ├── utils/        # Utilities
     │   └── widgets/      # Common widgets
     └── features/         # Functional modules
-        └── auth/         # Authentication module
+        └── auth/         # Module
             ├── data/     # Data layer
             ├── domain/   # Business logic layer
             └── presentation/ # Presentation layer
@@ -91,7 +90,7 @@ lib/
 1. Clone the repository:
 
    ```bash
-   git clone <repository-url>
+   git clone https://github.com/zanz9/flutter_architecture
    cd flutter_architecture
    ```
 
@@ -114,8 +113,7 @@ flutter run
 
 ## Project Features
 
-- **Multilingual Support**: Support for multiple languages with Russian as the primary language
+- **Multilingual Support**: Support for multiple languages
 - **Dark/Light Theme**: Support for different themes
 - **Error Handling**: Centralized system for error handling and logging
-- **Monitoring**: Integration with Sentry for tracking errors in production
 - **Flavors**: Support for different development environments (development, production)
