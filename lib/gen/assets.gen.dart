@@ -9,4 +9,9 @@
 
 class Assets {
   const Assets._();
+
+  static const String aGitkeep = 'assets/.gitkeep';
+
+  /// List of all assets
+  static List<String> get values => [aGitkeep];
 }

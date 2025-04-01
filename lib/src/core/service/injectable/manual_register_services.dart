@@ -4,6 +4,8 @@ import 'package:flutter_architecture/src/core/api/client/dio/token_interceptor.d
 import 'package:flutter_architecture/src/core/service/injectable/injectable_service.dart';
 import 'package:flutter_architecture/src/core/service/storage/storage_service.dart';
 import 'package:flutter_architecture/src/core/service/storage/storage_service_impl.dart';
+import 'package:flutter_architecture/src/features/auth/data/repositories/auth_repository_impl.dart';
+import 'package:flutter_architecture/src/features/auth/domain/repositories/i_auth_repository.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:talker_bloc_logger/talker_bloc_logger.dart';
 import 'package:talker_dio_logger/talker_dio_logger.dart';
@@ -30,4 +32,6 @@ void manualRegisterServices() {
   dio.interceptors.add(getIt<TalkerDioLogger>());
 
   getIt.registerLazySingleton<Dio>(() => dio);
+
+  getIt.registerLazySingleton<IAuthRepo>(() => getIt<AuthRepoImpl>());
 }
