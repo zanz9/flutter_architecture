@@ -41,10 +41,9 @@ class AuthEvent with _$AuthEvent {
 }
 
 // MARK: - Bloc
-@injectable
 class AuthBloc extends BaseBloc<AuthEvent, AuthState> {
   AuthBloc(
-    @Named.from(AuthRepoImpl) this._authRepository,
+    this._authRepository,
   ) : super(const AuthState.initial());
 
   final IAuthRepo _authRepository;

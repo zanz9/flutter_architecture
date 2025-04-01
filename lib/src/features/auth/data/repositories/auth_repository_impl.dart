@@ -10,8 +10,7 @@ import 'package:flutter_architecture/src/features/auth/domain/requests/login_req
 import 'package:fpdart/fpdart.dart';
 import 'package:injectable/injectable.dart';
 
-@named
-@LazySingleton(as: IAuthRepo)
+@lazySingleton
 class AuthRepoImpl implements IAuthRepo {
   AuthRepoImpl(
     @Named.from(AuthRemoteImpl) this._authRemote,
