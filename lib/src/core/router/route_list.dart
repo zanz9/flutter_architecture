@@ -4,18 +4,14 @@ List<RouteBase> _routes() => <RouteBase>[
       GoRoute(
         path: RoutePaths.initial,
         name: RouteNames.initial,
-        builder: (context, state) => const Scaffold(
-          body: Center(
-            child: Text('Splash'),
-          ),
-        ),
-        routes: <RouteBase>[
-          GoRoute(
-            path: RoutePaths.auth,
-            name: RouteNames.auth,
-            builder: (context, state) => const LoginPage(),
-          ),
-        ],
+        redirect: (_, __) {
+          return RoutePaths.auth;
+        },
+      ),
+      GoRoute(
+        path: RoutePaths.auth,
+        name: RouteNames.auth,
+        builder: (context, state) => const LoginPage(),
       ),
       GoRoute(
         path: RoutePaths.talker,

@@ -70,7 +70,10 @@ class LoginPageState extends State<LoginPage> {
                   ),
                   ElevatedButton(
                     onPressed: () {
-                      // Handle login action
+                      bloc.add(AuthEvent.doLogin(
+                        login: 'test',
+                        password: 'test',
+                      ));
                     },
                     child: const Text('Login'),
                   ),
